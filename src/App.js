@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const App = props => {
   const [state, setState] = useState(props)
   const {name, price} = state
+
+  useEffect(() => {
+    console.log('useEffect is invoked')
+  })
+
+  useEffect(() => {
+    console.log('this is like component')
+  }, [])
+
+  useEffect(() => {
+    console.log('aaaaaaaaaa')
+  }, [name])
+
   
     return (
     <>
